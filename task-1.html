@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="utf-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+	<link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC" crossorigin="anonymous">
+	<link rel="stylesheet" type="text/css" href="task-1.css">
+	<title>Laba 4</title>
+</head>
+<body>
+	<div id="navbar">
+		<a class="active" href="#">MyShop</a>
+	</div>
+	<div id="wrapper">
+		<div id="forms">
+			<p>
+				<form>
+					<div style="margin-top: 5px; margin-bottom: 5px;">
+						<input class="form-control" type="text" placeholder="Наименование товара" name="itemName">
+					</div>
+					<div style="margin-top: 5px; margin-bottom: 5px;">
+						<input class="form-control" type="text" placeholder="Цена товара" name="itemPrice">
+					</div>
+					<div style="margin-top: 5px; margin-bottom: 5px;">
+						<input class="btn btn-outline-dark" type="button" value="Добавить в таблицу" style="width: 100%"
+						onclick="addToList()">
+					</div>
+				</form>
+			</p>
+			<p>
+				<form>
+					<div style="margin-top: 5px; margin-bottom: 5px;">
+						<input class="form-control" type="text" placeholder="Номер строки" name="lineNum">
+					</div>
+					<div style="margin-top: 5px; margin-bottom: 5px;">
+						<input class="btn btn-outline-dark" type="button" value="Добавить в корзину" style="width: 100%"
+						onclick="addToCart()">
+					</div>
+				</form>
+			</p>
+		</div>
+		<div id="itemList">
+			<table id="itemListTable">
+				<tr>
+					<th colspan="3">Список товаров</th>
+				</tr>
+			</table>
+		</div>
+		<div id="cart">
+			<table id="cartTable">
+				<tr class="nostyle">
+					<th colspan="3">Корзина</th>
+				</tr>
+			</table>
+			<p style="margin: 5px;">
+				<button class="btn btn-outline-dark edited" style="width: 100%;"
+				onclick="calcOrderSum()">Посчитать сумму</button>
+			</p>
+			<p style="margin: 5px; text-align: center;">
+				Итого: <span id="orderSum">0</span> рублей.	
+			</p>
+		</div>
+	</div>
+	<script type="text/javascript" src="task-1.js"></script>
+	<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/js/bootstrap.bundle.min.js" integrity="sha384-MrcW6ZMFYlzcLA8Nl+NtUVF0sA7MsXsP1UyJoMp4YLEuNSfAP+JcXn/tWtIaxVXM" crossorigin="anonymous"></script>
+</body>
+</html>
